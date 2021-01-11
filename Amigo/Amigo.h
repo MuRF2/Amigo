@@ -12,7 +12,6 @@ public:
 	void inputmenue();
 	void input(int);
 
-	void ClearScreen();
 
 
 };
