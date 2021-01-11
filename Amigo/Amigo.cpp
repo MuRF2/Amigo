@@ -33,7 +33,6 @@ void Amigo::mainmenue()
 	cout << "2) About" << endl;
 	cout << "choose: ";
 	cin >> choose;
-	ClearScreen();
 	switch (choose)
 	{
 	case 1: inputmenue();
@@ -51,7 +50,6 @@ void Amigo::inputmenue()
 	cout << "3) Main menue" << endl;
 	cout << "choose: ";
 	cin >> choose;
-	ClearScreen();
 	switch (choose)
 	{
 	case 1: input(1);
@@ -66,7 +64,6 @@ void Amigo::inputmenue()
 void Amigo::input(int i)
 {
 	cout << "Enter name, than sequence" << endl;
-	ClearScreen();
 	switch (i)
 	{
 
