@@ -4,9 +4,15 @@
 
 BioSequence::BioSequence()
 {
+	setLength(0);
 	/*setName();
 	setStringContent();
 	setLength();*/
+}
+
+std::string BioSequence::getType()
+{
+	return std::string();
 }
 
 void BioSequence::setName()
@@ -22,6 +28,11 @@ std::string BioSequence::getName()
 void BioSequence::setLength()
 {
 	this->length = getStringContent().length();
+}
+
+void BioSequence::setLength(int number)
+{
+	this->length = number;
 }
 
 int BioSequence::getLength()

@@ -4,7 +4,7 @@
 
 ProteinSequence::ProteinSequence()
 {
-	//fillasSequence();
+	fillasSequence();
 }
 
 void ProteinSequence::fillasSequence()

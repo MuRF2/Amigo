@@ -31,14 +31,14 @@ void Amigo::mainmenue()
 	int choose;
 	intro();
 	cout << "1) Inputmenue" << endl;
-	cout << "2) About" << endl;
+	cout << "2) Proteins" << endl;
 	cout << "choose: ";
 	cin >> choose;
 	ClearScreen();
 	switch (choose)
 	{
 	case 1: inputmenue();
-	case 2: break;
+	case 2: proteinmenue();
 	default:
 		break;
 	}
@@ -70,11 +70,45 @@ void Amigo::input(int i)
 	ClearScreen();
 	switch (i)
 	{
-
+	case 1: initalProtein(protein);
 	default:
 		break;
 	}
 	inputmenue();
+}
+
+void Amigo::proteinmenue()
+{
+	int choose;
+	cout << "Print Protein" << endl;
+	cout << "1) Potein" << endl;
+	cout << "2) Protein" << endl; 
+	cin >> choose; 
+	ClearScreen();
+	switch (choose)
+	{
+	case 1: printProtein(protein);
+	default:
+		break;
+	}
+}
+
+void Amigo::initalProtein(ProteinSequence name)
+{
+	cin.ignore(); // https://www.cplusplus.com/forum/beginner/39549/
+	cout << "Enter name:" << endl;
+	name.setName();
+	cout << "Enter Sequence" << endl; 
+	name.setStringContent();
+	name.setLength();
+	name.fillasSequence();	
+	ClearScreen();
+}
+
+void Amigo::printProtein(ProteinSequence name)
+{
+	cout << "Name: " << name.getName() << endl;
+	name.printasSequence();
 }
 
 /*
@@ -116,6 +150,8 @@ void Amigo::ClearScreen()
 	/* Move the cursor home */
 	SetConsoleCursorPosition(hStdOut, homeCoords);
 }
+
+
 
 
 
